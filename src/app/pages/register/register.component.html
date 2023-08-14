@@ -1,0 +1,65 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+        <div class="col=md-6 offset-md-3">
+          <mat-card style="margin-left:250px; margin-right: 250px; ">
+            <div class="container text-center ">
+                <img src="../../../assets/reg.png" alt="" />
+            </div>
+            <h1 class="text-center">Register Hear !</h1>
+            
+            
+              
+              <form  class="text-center" (ngSubmit)="formSubmit()">
+
+                <div class="form-group" >
+                  <mat-form-field class="full-width"appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input type="text" class="form-control"  id="inputName" required 
+                    [(ngModel)]="users.uname"  [ngModelOptions]="{standalone: true}" 
+                    name="uname" matInput placeholder="Enter your name">
+                    <mat-hint>User Name must be unique</mat-hint>
+                  </mat-form-field>
+                </div>
+                
+
+                <div class="form-group"  >
+                  <mat-form-field  class="full-width" appearance="outline">
+                    <mat-label>Mobile Number</mat-label>
+                    <input type="text" class="form-control"  id="inputMobile" required 
+                    [(ngModel)]="users.uphone"  [ngModelOptions]="{standalone: true}" 
+                    name="uphone" matInput placeholder="Enter your mobile number" >
+                  </mat-form-field>
+                </div>
+
+                <div class="form-group"  >
+                  <mat-form-field class="full-width"appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input type="email" class="form-control" id="inputEmail" required  
+                    [(ngModel)]="users.email"  [ngModelOptions]="{standalone: true}" 
+                    name="email" matInput placeholder="Enter your email" >
+                  </mat-form-field>
+                </div>
+
+                <div class="form-group"  >
+                  <mat-form-field class="full-width"appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input type="password" class="form-control" id="inputPassword1"
+                     required [(ngModel)]="users.password"   [ngModelOptions]="{standalone: true}" 
+                    name="password" matInput placeholder="Enter your password" >
+                    
+                  </mat-form-field>
+                </div>
+                
+
+                <div class="container text-center">
+                  <button type="submit"class="ml20 mb20" mat-raised-button color="primary" >Register</button>
+                  <button class="ml20 mb20" mat-raised-button color="accent" >Clear</button>
+                </div>
+              </form>
+            
+          </mat-card>
+        </div>
+    </div>
+    </div>
+</div>
